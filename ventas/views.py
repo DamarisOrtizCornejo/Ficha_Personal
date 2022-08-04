@@ -23,6 +23,12 @@ def articulo(request):
     """<h2>Mantenimiento de Articulo</h2>
        <p>List de articulos</p>""")
 
+def venta(request):
+  data = {
+        'titulo': "Inicio"
+  }
+  return render(request, "ventas/ventas.html",data)
+
 def cliente(request):
   data = {
       'titulo':'GESTION DE CLIENTES',
@@ -40,11 +46,6 @@ def crearCliente(request):
   }
   return render(request, "ventas/clientes/formCliente.html",data)
 
-def venta(request):
-  data = {
-        'titulo': "Inicio"
-  }
-  return render(request, "ventas/ventas.html",data)
 
 def FichaPersonal(request):
   data = {
@@ -52,10 +53,18 @@ def FichaPersonal(request):
   }
   return render(request, "FichaPersonal/fichaPersonal.html", data)
 
-def crearFicha(request):
+def empleado(request):
   data = {
-      'titulo':'REGISTRO DE EMPLEADOS',
-      'crear_url':'/crearempleado',
+      'titulo':'GESTION DE EMPLEADOS',
+      'crear_url': '/crearEmpleado',
+      'listar_url': '/empleado',
+  }
+  return render(request, "FichaPersonal/empleados/listEmpleado.html",data)
+
+def crearEmpleado(request):
+  data = {
+      'titulo':'MANTENIMIENTO DE EMPLEADOS',
+      'crear_url':'/crearEmpleado',
       'action':'add',
       'listar_url': '/empleado',
   }
