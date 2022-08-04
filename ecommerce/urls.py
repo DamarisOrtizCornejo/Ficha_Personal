@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from ventas.views import inicio,articulo,cliente,crearCliente,venta
+from ventas.views import FichaPersonal,crearFicha,cargo,departamento,sueldo
 from django.conf.urls.static import static
 from ecommerce import settings
 urlpatterns = [
@@ -24,6 +25,11 @@ urlpatterns = [
     path('articulo/', articulo, name='articulo'),
     path('cliente/', cliente, name='cliente'),
     path('crearcliente/', crearCliente, name='crearcliente'),
+    path('fichaPersonal/', FichaPersonal, name='FichaPersonal'),
+    path('crearEmpleados', crearFicha, name='crearFicha'),
+    path('cargo', cargo, name='cargo'),
+    path('departamento', departamento, name='departamento'),
+    path('sueldo', sueldo, name='sueldo'),
     path('venta/', venta, name='venta'),
 ]
 if settings.DEBUG:

@@ -120,8 +120,10 @@
             <div class="card" style="height:15rem"  >
               <img src="{% static 'img/cards/administracion.png' %}" class="img-fluid  mx-auto d-block" style="width:35%">
               <div class="card-body text-center">
-                <h5 class="card-title text-success">Ficha de Personal</h5>
-                <p class="card-text">Hoja de vidad de los empleados de la empresa</p>
+                <a class="text-decoration-none" href="{% url 'FichaPersonal' %}">
+                    <h5 class="card-title text-success">Ficha Personal</h5>
+                  </a>
+                <p class="card-text">Hoja de vida de los empleados de la empresa</p>
               </div>
             </div>
           </div>

@@ -45,3 +45,45 @@ def venta(request):
         'titulo': "Inicio"
   }
   return render(request, "ventas/ventas.html",data)
+
+def FichaPersonal(request):
+  data = {
+        'titulo': "Inicio"
+  }
+  return render(request, "FichaPersonal/fichaPersonal.html", data)
+
+def crearFicha(request):
+  data = {
+      'titulo':'REGISTRO DE EMPLEADOS',
+      'crear_url':'/crearempleado',
+      'action':'add',
+      'listar_url': '/empleado',
+  }
+  return render(request, "FichaPersonal/empleados/formEmpleado.html",data)
+
+def cargo(request):
+  data = {
+      'titulo':'CARGOS',
+      'crear_url':'/crearcargo',
+      'action':'add',
+      'listar_url': '/cargo',
+  }
+  return render(request, "FichaPersonal/cargo/cargo.html",data)
+
+def departamento(request):
+  data = {
+      'titulo':'DEPARTAMENTOS',
+      'crear_url':'/creardepartamento',
+      'action':'add',
+      'listar_url': '/departamento',
+  }
+  return render(request, "FichaPersonal/departamento/departamento.html",data)
+
+def sueldo(request):
+  data = {
+      'titulo':'SUELDOS',
+      'crear_url':'/sueldo',
+      'action':'add',
+      'listar_url': '/sueldo',
+  }
+  return render(request, "FichaPersonal/sueldo/sueldo.html",data)
