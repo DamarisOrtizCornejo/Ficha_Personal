@@ -198,8 +198,17 @@ def eliminarDepartamento(request):
 def sueldo(request):
   data = {
       'titulo':'SUELDOS',
-      'crear_url':'/sueldo',
+      'crear_url':'/crearSueldo',
       'action':'add',
       'listar_url': '/sueldo',
   }
-  return render(request, "FichaPersonal/sueldo/sueldo.html",data)
+  return render(request, "FichaPersonal/sueldo/listSueldo.html", data)
+
+def crearSueldo(request):
+  data = {
+      'titulo':'MANTENIMIENTO DE SUELDOS',
+      'crear_url':'/crearSueldo',
+      'action':'add',
+      'listar_url': '/sueldo',
+  }
+  return render(request, "FichaPersonal/sueldo/formSueldo.html",data)

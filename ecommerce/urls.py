@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from ventas.views import inicio,articulo,cliente,crearCliente,venta
-from ventas.views import FichaPersonal,empleado,crearEmpleado,eliminarEmpleado,datosMedicos,crearDatosMedicos,contactoEmergencias,crearContactoEmergencias,infoAcademica,crearInfoAcademica,capacitaciones,crearCapacitaciones,cargo,crearCargo,eliminarCargo,departamento,crearDepartamento,eliminarDepartamento,sueldo
+from ventas.views import FichaPersonal,empleado,crearEmpleado,eliminarEmpleado,datosMedicos,crearDatosMedicos,contactoEmergencias,crearContactoEmergencias,infoAcademica,crearInfoAcademica,capacitaciones,crearCapacitaciones,cargo,crearCargo,eliminarCargo,departamento,crearDepartamento,eliminarDepartamento,sueldo,crearSueldo
 from django.conf.urls.static import static
 from ecommerce import settings
 urlpatterns = [
@@ -44,6 +44,7 @@ urlpatterns = [
     path('crearDepartamento', crearDepartamento, name='crearDepartamento'),
     path('eliminarDepartamento', eliminarDepartamento, name='eliminarDepartamento'),
     path('sueldo', sueldo, name='sueldo'),
+    path('crearSueldo', crearSueldo, name='crearSueldo'),
     path('venta/', venta, name='venta'),
 ]
 if settings.DEBUG:
