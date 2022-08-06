@@ -144,6 +144,12 @@ def crearCapacitaciones(request):
   }
   return render(request, "FichaPersonal/Capacitaciones/formCapacitacion.html",data)
 
+def eliminarCapacitaciones(request):
+    data = {
+
+    }
+    return render(request, "FichaPersonal/Capacitaciones/eliminar_capacitaciones.html", data)
+
 def cargo(request):
   data = {
       'titulo':'CARGOS',

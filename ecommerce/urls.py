@@ -16,7 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from ventas.views import inicio,articulo,cliente,crearCliente,venta
-from ventas.views import FichaPersonal,empleado,crearEmpleado,eliminarEmpleado,datosMedicos,crearDatosMedicos,contactoEmergencias,crearContactoEmergencias,infoAcademica,crearInfoAcademica,capacitaciones,crearCapacitaciones,cargo,crearCargo,eliminarCargo,departamento,crearDepartamento,eliminarDepartamento,sueldo,crearSueldo
+from ventas.views import FichaPersonal,empleado,crearEmpleado,eliminarEmpleado,\
+    datosMedicos,crearDatosMedicos,\
+    contactoEmergencias,crearContactoEmergencias,\
+    infoAcademica,crearInfoAcademica,\
+    capacitaciones,crearCapacitaciones,eliminarCapacitaciones,\
+    cargo,crearCargo,eliminarCargo,\
+    departamento,crearDepartamento,eliminarDepartamento,\
+    sueldo,crearSueldo
 from django.conf.urls.static import static
 from ecommerce import settings
 urlpatterns = [
@@ -37,6 +44,7 @@ urlpatterns = [
     path('crearInfoAcademica/', crearInfoAcademica, name='crearInfoAcademica'),
     path('capacitaciones/', capacitaciones, name='capacitaciones'),
     path('crearCapacitaciones/', crearCapacitaciones, name='crearCapacitaciones'),
+    path('eliminarCapacitaciones/', eliminarCapacitaciones, name='eliminarCapacitaciones'),
     path('cargo', cargo, name='cargo'),
     path('crearCargo', crearCargo, name='crearCargo'),
     path('eliminarCargo', eliminarCargo, name='eliminarCargo'),
