@@ -16,14 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from ventas.views import inicio,articulo,cliente,crearCliente,venta
-from ventas.views import FichaPersonal,empleado,crearEmpleado,eliminarEmpleado,\
-    datosMedicos,crearDatosMedicos,eliminarDatosMedicos,\
-    contactoEmergencias,crearContactoEmergencias,eliminarContactoEmergencia,\
-    infoAcademica,crearInfoAcademica,eliminarInfoAcademica,\
-    capacitaciones,crearCapacitaciones,eliminarCapacitaciones,\
-    cargo,crearCargo,eliminarCargo,\
-    departamento,crearDepartamento,eliminarDepartamento,\
-    sueldo,crearSueldo,eliminarSueldo
+from ventas.views import FichaPersonal,empleado,crearEmpleado,eliminarEmpleado,editarEmpleado,\
+    datosMedicos,crearDatosMedicos,eliminarDatosMedicos,editarDatosMedicos,\
+    contactoEmergencias,crearContactoEmergencias,eliminarContactoEmergencia,editarContactoEmergencias,\
+    infoAcademica,crearInfoAcademica,eliminarInfoAcademica,editarInfoAcademica,\
+    capacitaciones,crearCapacitaciones,eliminarCapacitaciones,editarCapacitaciones,\
+    cargo,crearCargo,eliminarCargo,editarCargo,\
+    departamento,crearDepartamento,eliminarDepartamento,editarDepartamento,\
+    sueldo,crearSueldo,eliminarSueldo,editarSueldo
 from django.conf.urls.static import static
 from ecommerce import settings
 urlpatterns = [
@@ -33,30 +33,46 @@ urlpatterns = [
     path('cliente/', cliente, name='cliente'),
     path('crearcliente/', crearCliente, name='crearcliente'),
     path('fichaPersonal/', FichaPersonal, name='FichaPersonal'),
+
     path('empleado/', empleado, name='empleado'),
     path('crearEmpleado', crearEmpleado, name='crearEmpleado'),
     path('eliminarEmpleado', eliminarEmpleado, name='eliminarEmpleado'),
+    path('editarEmpleado', editarEmpleado, name='editarEmpleado'),
+
     path('datosMedicos/', datosMedicos, name='datosMedicos'),
     path('crearDatosMedicos/', crearDatosMedicos, name='crearDatosMedicos'),
     path('eliminarDatosMedicos/', eliminarDatosMedicos, name='eliminarDatosMedicos'),
+    path('editarMedico/', editarDatosMedicos, name='medic'),
+
     path('contactoEmergencias/', contactoEmergencias, name='contactoEmergencias'),
     path('crearContactoEmergencias/', crearContactoEmergencias, name='crearContactoEmergencias'),
     path('eliminarContactoEmergencias/', eliminarContactoEmergencia, name='eliminarContactoEmergencia'),
+    path('editarContacto/', editarContactoEmergencias, name='editarContactoEmergencias'),
+
     path('infoAcademica/', infoAcademica, name='infoAcademica'),
     path('crearInfoAcademica/', crearInfoAcademica, name='crearInfoAcademica'),
     path('eliminarInfoAcademica/', eliminarInfoAcademica, name='eliminarInfoAcademica'),
+    path('editarInformacion/', editarInfoAcademica, name='editarInfoAcademica'),
+
     path('capacitaciones/', capacitaciones, name='capacitaciones'),
     path('crearCapacitaciones/', crearCapacitaciones, name='crearCapacitaciones'),
     path('eliminarCapacitaciones/', eliminarCapacitaciones, name='eliminarCapacitaciones'),
+    path('editarCap/', editarCapacitaciones, name='cap'),
+
     path('cargo', cargo, name='cargo'),
     path('crearCargo', crearCargo, name='crearCargo'),
     path('eliminarCargo', eliminarCargo, name='eliminarCargo'),
+    path('editarcar/', editarCargo, name='car'),
+
     path('departamento', departamento, name='departamento'),
     path('crearDepartamento', crearDepartamento, name='crearDepartamento'),
     path('eliminarDepartamento', eliminarDepartamento, name='eliminarDepartamento'),
+    path('editarDepart', editarDepartamento, name='editarDepartamento'),
+
     path('sueldo', sueldo, name='sueldo'),
     path('crearSueldo', crearSueldo, name='crearSueldo'),
     path('eliminarSueldo', eliminarSueldo, name='eliminarSueldo'),
+    path('editarSueldo', editarSueldo, name='editarSueldo'),
     path('venta/', venta, name='venta'),
 ]
 if settings.DEBUG:

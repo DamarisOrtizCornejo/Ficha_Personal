@@ -76,6 +76,15 @@ def eliminarEmpleado(request):
     }
     return render(request, "FichaPersonal/empleados/eliminar_empleado.html", data)
 
+def editarEmpleado(request):
+  data = {
+      'titulo': 'EDITAR EMPLEADOS',
+      'crear_url': '/crearEmpleado',
+      'action': 'add',
+      'listar_url': '/empleado',
+  }
+  return render(request, "FichaPersonal/empleados/editarEmpleado.html",data)
+
 def datosMedicos(request):
   data = {
       'titulo':'GESTION DE DATOS MÈDICOS DE EMPLEADOS',
@@ -98,6 +107,15 @@ def eliminarDatosMedicos(request):
 
     }
     return render(request, "FichaPersonal/DatosMedicos/eliminarDatosMedicos.html", data)
+
+def editarDatosMedicos(request):
+  data = {
+      'titulo': 'EDITAR MEDICO',
+      'crear_url': '/datosMedicos',
+      'action': 'add',
+      'listar_url': '/datosMedicos',
+  }
+  return render(request, "FichaPersonal/DatosMedicos/editarDatosMedicos.html",data)
 
 def contactoEmergencias(request):
   data = {
@@ -122,6 +140,15 @@ def eliminarContactoEmergencia(request):
     }
     return render(request, "FichaPersonal/ContactoEmergencia/eliminarContactoEmergencia.html", data)
 
+def editarContactoEmergencias(request):
+  data = {
+      'titulo':'EDITAR CONTACTO DE EMERGENCIA DE EMPLEADOS',
+      'crear_url':'/crearContactoEmergencias',
+      'action':'add',
+      'listar_url': '/contactoEmergencias',
+  }
+  return render(request, "FichaPersonal/ContactoEmergencia/editarContacto.html",data)
+
 def infoAcademica(request):
   data = {
       'titulo':'GESTION DE INFORMACIÒN ACADÈMICA DE EMPLEADOS',
@@ -145,6 +172,16 @@ def eliminarInfoAcademica(request):
     }
     return render(request, "FichaPersonal/InformacionAcademica/eliminarInfoAcademica.html", data)
 
+def editarInfoAcademica(request):
+  data = {
+      'titulo':'EDITAR INFORMACIÒN ACADÈMICA DE EMPLEADOS',
+      'crear_url':'/crearInfoAcademica',
+      'action':'add',
+      'listar_url': '/infoAcademica',
+  }
+  return render(request, "FichaPersonal/InformacionAcademica/editarInfoAcademica.html",data)
+
+
 def capacitaciones(request):
   data = {
       'titulo':'GESTION DE CAPACITACIÒN DE EMPLEADOS',
@@ -167,6 +204,15 @@ def eliminarCapacitaciones(request):
 
     }
     return render(request, "FichaPersonal/Capacitaciones/eliminar_capacitaciones.html", data)
+
+def editarCapacitaciones(request):
+  data = {
+      'titulo': 'EDITAR CAPACITACION',
+      'crear_url': '/cap',
+      'action': 'add',
+      'listar_url': '/capacitaciones',
+  }
+  return render(request, "FichaPersonal/Capacitaciones/editarCap.html", data)
 
 def cargo(request):
   data = {
@@ -193,6 +239,15 @@ def eliminarCargo(request):
     }
     return render(request, "FichaPersonal/cargo/eliminar_cargo.html",data)
 
+def editarCargo(request):
+  data = {
+      'titulo': 'EDITAR CARGO',
+      'crear_url': '/car',
+      'action': 'add',
+      'listar_url': '/cargo',
+  }
+  return render(request, "FichaPersonal/cargo/editarCargo.html", data)
+
 def departamento(request):
   data = {
       'titulo':'DEPARTAMENTOS',
@@ -218,6 +273,14 @@ def eliminarDepartamento(request):
     }
     return render(request, "FichaPersonal/departamento/eliminar_departamento.html", data)
 
+def editarDepartamento(request):
+  data = {
+      'titulo':'EDITAR DEPARTAMENTOS',
+      'crear_url':'/crearDepartamento',
+      'action':'add',
+      'listar_url': '/departamento',
+  }
+  return render(request, "FichaPersonal/departamento/editarDepartamento.html",data)
 
 def sueldo(request):
   data = {
@@ -243,3 +306,12 @@ def eliminarSueldo(request):
 
     }
     return render(request, "FichaPersonal/sueldo/eliminarSueldo.html", data)
+
+def editarSueldo(request):
+  data = {
+      'titulo':'EDITAR SUELDOS',
+      'crear_url':'/crearSueldo',
+      'action':'add',
+      'listar_url': '/sueldo',
+  }
+  return render(request, "FichaPersonal/sueldo/editarSueldo.html",data)
