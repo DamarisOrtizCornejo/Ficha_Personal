@@ -17,13 +17,13 @@ from django.contrib import admin
 from django.urls import path
 from ventas.views import inicio,articulo,cliente,crearCliente,venta
 from ventas.views import FichaPersonal,empleado,crearEmpleado,eliminarEmpleado,\
-    datosMedicos,crearDatosMedicos,\
-    contactoEmergencias,crearContactoEmergencias,\
-    infoAcademica,crearInfoAcademica,\
+    datosMedicos,crearDatosMedicos,eliminarDatosMedicos,\
+    contactoEmergencias,crearContactoEmergencias,eliminarContactoEmergencia,\
+    infoAcademica,crearInfoAcademica,eliminarInfoAcademica,\
     capacitaciones,crearCapacitaciones,eliminarCapacitaciones,\
     cargo,crearCargo,eliminarCargo,\
     departamento,crearDepartamento,eliminarDepartamento,\
-    sueldo,crearSueldo
+    sueldo,crearSueldo,eliminarSueldo
 from django.conf.urls.static import static
 from ecommerce import settings
 urlpatterns = [
@@ -38,10 +38,13 @@ urlpatterns = [
     path('eliminarEmpleado', eliminarEmpleado, name='eliminarEmpleado'),
     path('datosMedicos/', datosMedicos, name='datosMedicos'),
     path('crearDatosMedicos/', crearDatosMedicos, name='crearDatosMedicos'),
+    path('eliminarDatosMedicos/', eliminarDatosMedicos, name='eliminarDatosMedicos'),
     path('contactoEmergencias/', contactoEmergencias, name='contactoEmergencias'),
     path('crearContactoEmergencias/', crearContactoEmergencias, name='crearContactoEmergencias'),
+    path('eliminarContactoEmergencias/', eliminarContactoEmergencia, name='eliminarContactoEmergencia'),
     path('infoAcademica/', infoAcademica, name='infoAcademica'),
     path('crearInfoAcademica/', crearInfoAcademica, name='crearInfoAcademica'),
+    path('eliminarInfoAcademica/', eliminarInfoAcademica, name='eliminarInfoAcademica'),
     path('capacitaciones/', capacitaciones, name='capacitaciones'),
     path('crearCapacitaciones/', crearCapacitaciones, name='crearCapacitaciones'),
     path('eliminarCapacitaciones/', eliminarCapacitaciones, name='eliminarCapacitaciones'),
@@ -53,6 +56,7 @@ urlpatterns = [
     path('eliminarDepartamento', eliminarDepartamento, name='eliminarDepartamento'),
     path('sueldo', sueldo, name='sueldo'),
     path('crearSueldo', crearSueldo, name='crearSueldo'),
+    path('eliminarSueldo', eliminarSueldo, name='eliminarSueldo'),
     path('venta/', venta, name='venta'),
 ]
 if settings.DEBUG:
