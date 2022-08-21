@@ -28,12 +28,24 @@
             </div>
         </div>
         <div class="col-md-6">
-            <label class="form-label fw-bold">N° de Documento de Identidad:</label>
-            <input type="text" class="form-control" placeholder="Ingrese su número">
+            <label class="form-label fw-bold">N° de Cédula:</label>
+            <input type="text" class="form-control" placeholder="Ingrese su número de cédula">
+        </div>
+        <div class="col-12">
+            <label class="form-label fw-bold">N° de Pasaporte:</label>
+            <input type="text" class="form-control" placeholder="Ingrese su número de pasaporte">
         </div>
         <div class="col-md-6">
             <label class="form-label fw-bold">Fecha de Nacimiento:</label>
             <input type="date" class="form-control">
+        </div>
+        <div class="col-12">
+            <label for="inputState" class="form-label fw-bold">Género:</label>
+            <select id="inputState" class="form-select" style="width: 650px;">
+                <option selected>-------</option>
+                <option>Masculino</option>
+                <option>Femenino</option>
+            </select>
         </div>
         <div class="col-md-6">
             <label class="form-label fw-bold">Nacionalidad:</label>
@@ -68,7 +80,7 @@
         </div>
         <div class="col-md-6">
             <label for="inputState" class="form-label fw-bold">Tipo de Contrato:</label>
-            <select id="inputState" class="form-select"">
+            <select id="inputState" class="form-select">
                 <option selected>-------</option>
                 <option>Contrato indefinido</option>
                 <option>Contrato temporal</option>
@@ -124,6 +136,7 @@
     <hr class="bg-success border-4 border-top border-success">
     <h4 class="fw-bold fst-italic text-secondary text-center">DATOS MÉDICOS</h4>
     <hr class="bg-success border-4 border-top border-success">
+
         <div class="col-md-5">
             <label class="form-label fw-bold">Posee alguna discapacidad:</label>
             <div class="form-check mx-auto" style="width: 200px">
@@ -141,10 +154,9 @@
         </div>
         <div id="FITB_105" class="FITB formRender">
             <label for="inputState" class="form-label fw-bold">Tomas algun medicamento:
-            <input type="text" class="form-textbox validate[]" style="width: 50px; max-width: 1000px;">
-            <label for="105_shorttext-3"></label>
-            </label>
-            <b>menciona cuales<b/>
+                <input type="text" class="form-textbox validate[]" style="width: 50px; max-width: 1000px;">
+                <label for="105_shorttext-3"></label>
+            </label> <b>menciona cuales</b>
             <span data-type="textbox" data-grouptype="control_textbox" class="FITB-inptCont">
             <input type="text" class="form-textbox " style="width: 350px; max-width: 1000px;">
             </span>
@@ -182,6 +194,7 @@
     <hr class="bg-success border-4 border-top border-success">
     <h4 class="fw-bold fst-italic text-secondary text-center">CONTACTO DE EMERGENCIA</h4>
     <hr class="bg-success border-4 border-top border-success">
+
         <div class="col-12">
             <label class="form-label fw-bold">Nombre:</label>
             <input type="text" class="form-control" style="width: 650px;" placeholder="Ingrese el nombre">
@@ -222,6 +235,11 @@
             <label for="inputAddress" class="form-label fw-bold">Dirección:</label>
             <input type="text" class="form-control" style="width: 650px;" id="inputAddress" placeholder="Escribir dirección">
         </div>
+        <div>
+            <a class="btn btn-outline-info">
+                         <b>➕ Agregar</b>
+            </a>
+        </div>
     <br>
     <hr class="bg-success border-4 border-top border-success">
     <h4 class="fw-bold fst-italic text-secondary text-center">INFORMACIÓN ACADÉMICA</h4>
@@ -244,6 +262,11 @@
         <div class="col-12">
             <label class="form-label fw-bold">Título:</label>
             <input type="text" class="form-control" style="width: 650px;" placeholder="Ingrese su título">
+        </div>
+        <div>
+            <a class="btn btn-outline-info">
+                         <b>➕ Agregar</b>
+            </a>
         </div>
 
     <hr class="bg-success border-4 border-top border-success">
@@ -268,5 +291,9 @@
             <label class="form-label fw-bold">Duración:</label>
             <input type="text" class="form-control" style="width: 650px;" placeholder="Ingrese el tiempo de duración de la capacitación">
         </div>
-
+        <div>
+            <a class="btn btn-outline-info">
+                         <b>➕ Agregar</b>
+            </a>
+        </div>
 {% endblock %}

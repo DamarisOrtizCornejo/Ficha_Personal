@@ -1,4 +1,4 @@
-{% extends 'FichaPersonal/Capacitaciones/formularioCapacitaciones.html' %}
+{% extends 'FichaPersonal/boton_gua_can.html' %}
 {% load static %}
 
 {% block controls %}
@@ -15,13 +15,13 @@
         </div>
     <br>
         <div class="col-md-6">
-            <label class="form-label fw-bold">Periodo:</label>
-            <input type="date" class="form-control" placeholder="Ingrese el perdíodo de capacitación">
+            <label class="form-label fw-bold">Fecha:</label>
+            <input type="text" class="form-control" placeholder="15/04/2015">
         </div>
     <br>
         <div class="col-12">
             <label class="form-label fw-bold">Duración:</label>
-            <input type="text" class="form-control" style="width: 650px;" placeholder="Ingrese el tiempo de duración de la capacitación">
+            <input type="text" class="form-control" style="width: 650px;" placeholder="10 meses">
         </div>
 
 {% endblock %}

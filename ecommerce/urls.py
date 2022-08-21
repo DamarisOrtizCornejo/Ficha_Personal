@@ -17,10 +17,10 @@ from django.contrib import admin
 from django.urls import path
 from ventas.views import inicio,articulo,cliente,crearCliente,venta
 from ventas.views import FichaPersonal,empleado,crearEmpleado,eliminarEmpleado,editarEmpleado,\
-    datosMedicos,crearDatosMedicos,eliminarDatosMedicos,editarDatosMedicos,\
-    contactoEmergencias,crearContactoEmergencias,eliminarContactoEmergencia,editarContactoEmergencias,\
-    infoAcademica,crearInfoAcademica,eliminarInfoAcademica,editarInfoAcademica,\
-    capacitaciones,crearCapacitaciones,eliminarCapacitaciones,editarCapacitaciones,\
+    datosMedicos,crearDatosMedicos,eliminarDatosMedicos,editarDatosMedicos,registroDatosMedicos,\
+    contactoEmergencias,crearContactoEmergencias,eliminarContactoEmergencia,editarContactoEmergencias,registroContactoEmergencias,\
+    infoAcademica,crearInfoAcademica,eliminarInfoAcademica,editarInfoAcademica,registroInfoAcademica,\
+    capacitaciones,crearCapacitaciones,eliminarCapacitaciones,editarCapacitaciones,registroCapacitaciones,\
     cargo,crearCargo,eliminarCargo,editarCargo,\
     departamento,crearDepartamento,eliminarDepartamento,editarDepartamento,\
     sueldo,crearSueldo,eliminarSueldo,editarSueldo
@@ -43,21 +43,25 @@ urlpatterns = [
     path('crearDatosMedicos/', crearDatosMedicos, name='crearDatosMedicos'),
     path('eliminarDatosMedicos/', eliminarDatosMedicos, name='eliminarDatosMedicos'),
     path('editarMedico/', editarDatosMedicos, name='medic'),
+    path('registroDatosMedicos/', registroDatosMedicos, name='registroDatosMedicos'),
 
     path('contactoEmergencias/', contactoEmergencias, name='contactoEmergencias'),
     path('crearContactoEmergencias/', crearContactoEmergencias, name='crearContactoEmergencias'),
     path('eliminarContactoEmergencias/', eliminarContactoEmergencia, name='eliminarContactoEmergencia'),
     path('editarContacto/', editarContactoEmergencias, name='editarContactoEmergencias'),
+    path('registroContactoEmergencias/', registroContactoEmergencias, name='registroContactoEmergencias'),
 
     path('infoAcademica/', infoAcademica, name='infoAcademica'),
     path('crearInfoAcademica/', crearInfoAcademica, name='crearInfoAcademica'),
     path('eliminarInfoAcademica/', eliminarInfoAcademica, name='eliminarInfoAcademica'),
     path('editarInformacion/', editarInfoAcademica, name='editarInfoAcademica'),
+    path('registroInfoAcademica/', registroInfoAcademica, name='registroInfoAcademica'),
 
     path('capacitaciones/', capacitaciones, name='capacitaciones'),
     path('crearCapacitaciones/', crearCapacitaciones, name='crearCapacitaciones'),
     path('eliminarCapacitaciones/', eliminarCapacitaciones, name='eliminarCapacitaciones'),
     path('editarCap/', editarCapacitaciones, name='cap'),
+    path('registroCapacitaciones/', registroCapacitaciones, name='registroCapacitaciones'),
 
     path('cargo', cargo, name='cargo'),
     path('crearCargo', crearCargo, name='crearCargo'),

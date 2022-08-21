@@ -1,0 +1,48 @@
+{% extends 'FichaPersonal/boton_agr_reg.html' %}
+{% load static %}
+
+{% block controls %}
+    <h4 class="fw-bold fst-italic text-secondary text-center">CAPACITACIONES</h4>
+    <hr class="bg-success border-4 border-top border-success">
+    <table class="table table-info table-striped table-bordered border-dark">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Certificado</th>
+              <th scope="col">Fecha</th>
+              <th scope="col">Duración</th>
+              <th scope="col">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Archivo subido</td>
+              <td>15/04/2015</td>
+              <td>10 meses</td>
+              <td class="acciones">
+                <a href="{% url 'cap' %}">✏️</a>
+                <a href="{% url 'eliminarCapacitaciones' %}">❌</a>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Archivo sin subir</td>
+              <td>15/10/2020</td>
+              <td>4 meses</td>
+              <td class="acciones">
+                <a href="{% url 'cap' %}">✏️</a>
+                <a href="{% url 'eliminarCapacitaciones' %}">❌</a>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+
+{% endblock %}

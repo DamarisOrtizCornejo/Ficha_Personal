@@ -1,41 +1,36 @@
-{% extends 'consulta.html' %}
+{% extends 'FichaPersonal/boton_act_eli.html' %}
 {% load static %}
 
 {% block columns %}
-    <tr>
+    <tr class="text-center">
         <th scope="col" style="width: 5%;">#</th>
-        <th scope="col" style="width: 5%;">Nombre</th>
+        <th scope="col" style="width: 25%;">Empleado</th>
         <th scope="col" style="width: 10%;">Cèdula</th>
-        <th scope="col" style="width: 30%;">Celular</th>
-        <th scope="col" style="width: 10%;">Parentesco</th>
+        <th scope="col" style="width: 10%;">Celular</th>
         <th scope="col" style="width: 15%;">Direcciòn</th>
-        <th scope="col" style="width: 10%;">Opciones</th>
+        <th scope="col" style="width: 15%;">Opciones</th>
     </tr>
 {% endblock %}
 
 {% block rows %}
-  <tr>
+  <tr class="text-center">
       <td>1</td>
       <td>Damaris Ortiz</td>
       <td>0955453741</td>
       <td>0969188296</td>
-      <td>Madre</td>
       <td>Dùran</td>
       <td class="acciones">
-        <a href="{% url 'editarContactoEmergencias' %}">✏️</a>
-        <a href="{% url 'eliminarContactoEmergencia' %}">❌</a>
+        <a href="{% url 'registroContactoEmergencias' %}">🔎️ Ver información</a>
       </td>
   </tr>
-    <tr>
+    <tr class="text-center">
       <td>2</td>
       <td>Erick Bohorquez</td>
       <td>0914123458</td>
       <td>002268678</td>
-      <td>Padre</td>
       <td>Milagro</td>
       <td class="acciones">
-        <a href="{% url 'editarContactoEmergencias' %}">✏️</a>
-        <a href="{% url 'eliminarContactoEmergencia' %}">❌</a>
+        <a href="{% url 'registroContactoEmergencias' %}">🔎️ Ver información</a>
       </td>
   </tr>
 {% endblock %}

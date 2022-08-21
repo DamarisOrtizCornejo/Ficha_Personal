@@ -117,6 +117,16 @@ def editarDatosMedicos(request):
   }
   return render(request, "FichaPersonal/DatosMedicos/editarDatosMedicos.html",data)
 
+def registroDatosMedicos(request):
+  data = {
+      'titulo':'REGISTRO CONTACTO DE EMERGENCIA',
+      'crear_url':'/crearDatosMedicos',
+      'action':'add',
+      'atras_url': '/datosMedicos',
+      'listar_url': '/registroDatosMedicos',
+  }
+  return render(request, "FichaPersonal/DatosMedicos/registroMedico.html",data)
+
 def contactoEmergencias(request):
   data = {
       'titulo':'GESTION DE CONTACTO DE EMERGENCIA DE EMPLEADOS',
@@ -130,7 +140,7 @@ def crearContactoEmergencias(request):
       'titulo':'MANTENIMIENTO DE CONTACTO DE EMERGENCIA DE EMPLEADOS',
       'crear_url':'/crearContactoEmergencias',
       'action':'add',
-      'listar_url': '/contactoEmergencias',
+      'listar_url': '/registroContactoEmergencias',
   }
   return render(request, "FichaPersonal/ContactoEmergencia/formContactoEmergencia.html",data)
 
@@ -145,9 +155,19 @@ def editarContactoEmergencias(request):
       'titulo':'EDITAR CONTACTO DE EMERGENCIA DE EMPLEADOS',
       'crear_url':'/crearContactoEmergencias',
       'action':'add',
-      'listar_url': '/contactoEmergencias',
+      'listar_url': '/registroContactoEmergencias',
   }
   return render(request, "FichaPersonal/ContactoEmergencia/editarContacto.html",data)
+
+def registroContactoEmergencias(request):
+  data = {
+      'titulo':'REGISTRO CONTACTO DE EMERGENCIA',
+      'crear_url':'/crearContactoEmergencias',
+      'action':'add',
+      'atras_url': '/contactoEmergencias',
+      'listar_url': '/registroContactoEmergencias',
+  }
+  return render(request, "FichaPersonal/ContactoEmergencia/registroContacto.html",data)
 
 def infoAcademica(request):
   data = {
@@ -162,7 +182,7 @@ def crearInfoAcademica(request):
       'titulo':'MANTENIMIENTO DE INFORMACIÒN ACADÈMICA DE EMPLEADOS',
       'crear_url':'/crearInfoAcademica',
       'action':'add',
-      'listar_url': '/infoAcademica',
+      'listar_url': '/registroInfoAcademica',
   }
   return render(request, "FichaPersonal/InformacionAcademica/formInfoAcademica.html",data)
 
@@ -177,9 +197,19 @@ def editarInfoAcademica(request):
       'titulo':'EDITAR INFORMACIÒN ACADÈMICA DE EMPLEADOS',
       'crear_url':'/crearInfoAcademica',
       'action':'add',
-      'listar_url': '/infoAcademica',
+      'listar_url': '/registroInfoAcademica',
   }
   return render(request, "FichaPersonal/InformacionAcademica/editarInfoAcademica.html",data)
+
+def registroInfoAcademica(request):
+  data = {
+      'titulo':'REGISTRO INFORMACION ACADEMICA',
+      'crear_url':'/crearInfoAcademica',
+      'action':'add',
+      'atras_url': '/infoAcademica',
+      'listar_url': '/registroInfoAcademica',
+  }
+  return render(request, "FichaPersonal/InformacionAcademica/registroInfoAcademica.html",data)
 
 
 def capacitaciones(request):
@@ -195,7 +225,7 @@ def crearCapacitaciones(request):
       'titulo':'MANTENIMIENTO DE CAPACITACIÒN DE EMPLEADOS',
       'crear_url':'/crearCapacitaciones',
       'action':'add',
-      'listar_url': '/capacitaciones',
+      'listar_url': '/registroCapacitaciones',
   }
   return render(request, "FichaPersonal/Capacitaciones/formCapacitacion.html",data)
 
@@ -210,9 +240,19 @@ def editarCapacitaciones(request):
       'titulo': 'EDITAR CAPACITACION',
       'crear_url': '/cap',
       'action': 'add',
-      'listar_url': '/capacitaciones',
+      'listar_url': '/registroCapacitaciones',
   }
   return render(request, "FichaPersonal/Capacitaciones/editarCap.html", data)
+
+def registroCapacitaciones(request):
+  data = {
+      'titulo':'REGISTRO CAPACITACIONES',
+      'crear_url':'/crearCapacitaciones',
+      'action':'add',
+      'atras_url': '/capacitaciones',
+      'listar_url': '/registroCapacitaciones',
+  }
+  return render(request, "FichaPersonal/Capacitaciones/registroCapacitaciones.html",data)
 
 def cargo(request):
   data = {
